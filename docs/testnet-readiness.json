@@ -1,0 +1,40 @@
+{
+  "evidence": "read-only live RPC checks; no transactions submitted",
+  "market": {
+    "mode": "dreamdex",
+    "symbol": "BTC-PERP",
+    "chainId": 50383,
+    "account": "0x46A99DD5a6852c10D7640f12081A978ADD9D5CD3",
+    "pool": "0x4181dd08E73BbCdd1Ba3E615A18f6abD941b94C0",
+    "baseDecimals": 8,
+    "quoteDecimals": 18,
+    "tickSize": "100000000000000000",
+    "minQuantity": "13000",
+    "lotSize": "1000",
+    "explorerUrl": "https://explorer.testnet.somnia.network/tokyo",
+    "canTrade": false,
+    "nativeReduceOnly": false
+  },
+  "snapshot": {
+    "blockNumber": "37728161",
+    "blockHash": "0x45ed3e94de3ac6b721302833e9558e8e92657ab6972f8f3877c21e45b96d1617",
+    "observedAt": 1793426070000,
+    "position": "0",
+    "pendingBuys": "0",
+    "pendingSells": "0",
+    "markPrice": "77142843067923466000000",
+    "bestBid": "77310100000000000000000",
+    "bestAsk": "77323700000000000000000",
+    "collateral": "0"
+  },
+  "gasBalance": "0",
+  "marginBank": "0x478769E1177C0773c43A593DCCc4Ad15F15F1394",
+  "collateralToken": "0xed7993A74dAe1e6656B704A424DcD8711aAf4F72",
+  "confirmations": 2,
+  "warnings": [
+    "Native reduce-only IOC is unavailable. Closing orders require the single-writer account rule.",
+    "Read-only mode. Testnet trading has not been explicitly enabled.",
+    "This account has no testnet STT for gas.",
+    "This account has no positive perp margin balance."
+  ]
+}

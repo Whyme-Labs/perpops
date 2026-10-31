@@ -1,0 +1,203 @@
+{
+  "at": "2026-10-31T05:36:07.800Z",
+  "account": "0x46A99DD5a6852c10D7640f12081A978ADD9D5CD3",
+  "shannon": {
+    "block": {
+      "number": "528506457",
+      "hash": "0xccaf519a47c4944bcf1cb29bb131fe6745ef7ad1e90816ba942ed439f02d098d",
+      "timestamp": "1793424968"
+    },
+    "values": [
+      {
+        "label": "chainId",
+        "ok": true,
+        "value": 50312
+      },
+      {
+        "label": "netVersion",
+        "ok": true,
+        "value": "50312"
+      },
+      {
+        "label": "accountNative",
+        "ok": true,
+        "value": "0"
+      },
+      {
+        "label": "STTRouterNative",
+        "ok": true,
+        "value": "68285875218094720943197"
+      },
+      {
+        "label": "USDsoSymbol",
+        "ok": true,
+        "value": "USDso"
+      },
+      {
+        "label": "USDsoDecimals",
+        "ok": true,
+        "value": 18
+      },
+      {
+        "label": "accountUSDso",
+        "ok": true,
+        "value": "0"
+      },
+      {
+        "label": "stt.routers",
+        "ok": true,
+        "value": "0x000000000000000000000000b04373932bc05347757da6b8a226d7657584ab35"
+      },
+      {
+        "label": "stt.quoteGasPayment",
+        "ok": true,
+        "value": "0"
+      },
+      {
+        "label": "stt.mailbox",
+        "ok": true,
+        "value": "0xF805734aAC42cf238eAef9E905e3A04F2Ab554f9"
+      },
+      {
+        "label": "stt.destinationGas",
+        "ok": true,
+        "value": "44000"
+      },
+      {
+        "label": "usd.routers",
+        "ok": true,
+        "value": "0x000000000000000000000000ed7993a74dae1e6656b704a424dcd8711aaf4f72"
+      },
+      {
+        "label": "usd.quoteGasPayment",
+        "ok": false,
+        "error": "The contract function \"quoteGasPayment\" reverted.",
+        "cause": "The contract function \"quoteGasPayment\" reverted."
+      },
+      {
+        "label": "usd.mailbox",
+        "ok": true,
+        "value": "0xF805734aAC42cf238eAef9E905e3A04F2Ab554f9"
+      },
+      {
+        "label": "usd.destinationGas",
+        "ok": true,
+        "value": "64000"
+      },
+      {
+        "label": "publicMintSimulation100USDso",
+        "ok": true,
+        "value": {
+          "result": null
+        }
+      }
+    ]
+  },
+  "hideki": {
+    "block": {
+      "number": "37717145",
+      "hash": "0x01a8a14b24d9f2eb392efbe4a96e8e669f00ef6d4845c36069357c847210d622",
+      "timestamp": "1793424968"
+    },
+    "values": [
+      {
+        "label": "chainId",
+        "ok": true,
+        "value": 50383
+      },
+      {
+        "label": "netVersion",
+        "ok": true,
+        "value": "50000259"
+      },
+      {
+        "label": "accountNative",
+        "ok": true,
+        "value": "0"
+      },
+      {
+        "label": "STTRouterNative",
+        "ok": true,
+        "value": "99931814124781905279056803"
+      },
+      {
+        "label": "USDsoSymbol",
+        "ok": true,
+        "value": "USDso"
+      },
+      {
+        "label": "USDsoDecimals",
+        "ok": true,
+        "value": 18
+      },
+      {
+        "label": "accountUSDso",
+        "ok": true,
+        "value": "0"
+      },
+      {
+        "label": "stt.routers",
+        "ok": true,
+        "value": "0x00000000000000000000000067cd0778a719099daf2d346ad0db0d9e6ff6674c"
+      },
+      {
+        "label": "stt.quoteGasPayment",
+        "ok": true,
+        "value": "0"
+      },
+      {
+        "label": "stt.mailbox",
+        "ok": true,
+        "value": "0xD7C2E95c62De3c0ad95b2C1cf08E4B85DF6b332D"
+      },
+      {
+        "label": "stt.destinationGas",
+        "ok": true,
+        "value": "44000"
+      },
+      {
+        "label": "usd.routers",
+        "ok": true,
+        "value": "0x00000000000000000000000094e2e7f4b2b0a8e3032c7d3ff3c86790bb5979e6"
+      },
+      {
+        "label": "usd.quoteGasPayment",
+        "ok": true,
+        "value": "0"
+      },
+      {
+        "label": "usd.mailbox",
+        "ok": true,
+        "value": "0xD7C2E95c62De3c0ad95b2C1cf08E4B85DF6b332D"
+      },
+      {
+        "label": "usd.destinationGas",
+        "ok": true,
+        "value": "68000"
+      },
+      {
+        "label": "getSystemConfig",
+        "ok": true,
+        "value": {
+          "marginBank": "0x478769E1177C0773c43A593DCCc4Ad15F15F1394",
+          "collateralToken": "0xed7993A74dAe1e6656B704A424DcD8711aAf4F72",
+          "perpPoolFactory": "0xE631fAEE547baeE07353E290f0562ea67d856560",
+          "liquidationEngine": "0xA66d3C24Ad4a389d863846905D8173e1017e9F4D",
+          "insuranceFund": "0x50826894D47C6D4f3BeA38BFDC7Dc5c5be171b80",
+          "feeRecipient": "0xd58596620Ee6951B2958a931949e4ff7ce6222be",
+          "maxLeverageLimit": 20,
+          "fullyWired": true
+        }
+      },
+      {
+        "label": "getAccountState",
+        "ok": true,
+        "value": {
+          "unlockedCollateralBalance": "0",
+          "lockedCollateral": "0",
+          "activePerpPools": []
+        }
+      }
+    ]
+  }
+}

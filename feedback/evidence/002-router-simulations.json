@@ -1,0 +1,146 @@
+{
+  "block": {
+    "number": "528509576",
+    "hash": "0x3467e6161413cedcd9628abc2d50473ea580c50fa954a8e5b2751512f6da5311",
+    "timestamp": "1793425280"
+  },
+  "note": "All transferRemote probes are zero-amount eth_call simulations; no transaction was signed or broadcast.",
+  "rows": [
+    {
+      "token": "STT",
+      "address": "0x67CD0778A719099DAF2D346aD0Db0d9E6FF6674C",
+      "quoteGasPayment": {
+        "ok": true,
+        "value": "0"
+      },
+      "hook": {
+        "ok": true,
+        "value": "0x0000000000000000000000000000000000000000"
+      },
+      "transferRemote": {
+        "ok": true,
+        "value": "0xe1bd0e19ba1f8ad5690a3fa109d6b62193221f0cec6f0304a9e19eef70db101a"
+      }
+    },
+    {
+      "token": "USDso",
+      "address": "0x94E2E7f4B2B0a8E3032c7D3ff3c86790BB5979E6",
+      "quoteGasPayment": {
+        "ok": false,
+        "causes": [
+          {
+            "name": "ContractFunctionExecutionError",
+            "shortMessage": "The contract function \"quoteGasPayment\" reverted."
+          },
+          {
+            "name": "ContractFunctionRevertedError",
+            "shortMessage": "The contract function \"quoteGasPayment\" reverted."
+          }
+        ]
+      },
+      "hook": {
+        "ok": true,
+        "value": "0xF11C364Da4B5e22b3040be8EA77DccDBfD1277De"
+      },
+      "transferRemote": {
+        "ok": false,
+        "causes": [
+          {
+            "name": "ContractFunctionExecutionError",
+            "shortMessage": "The contract function \"transferRemote\" reverted."
+          },
+          {
+            "name": "ContractFunctionRevertedError",
+            "shortMessage": "The contract function \"transferRemote\" reverted."
+          }
+        ]
+      }
+    },
+    {
+      "token": "WBTC",
+      "address": "0x888d8C8090b8cDcEa5d05b1C206c2bFF18cd2DA9",
+      "quoteGasPayment": {
+        "ok": true,
+        "value": "0"
+      },
+      "hook": {
+        "ok": true,
+        "value": "0x0000000000000000000000000000000000000000"
+      },
+      "transferRemote": {
+        "ok": true,
+        "value": "0x9ac8eee4b865a18e2f121172e336fb48c1ddfcdb14f4f10523c996b1d91b536f"
+      }
+    },
+    {
+      "token": "WETH",
+      "address": "0x41C21248D6CC3883cd577D0eFEF3585b1358A8B2",
+      "quoteGasPayment": {
+        "ok": true,
+        "value": "0"
+      },
+      "hook": {
+        "ok": true,
+        "value": "0x0000000000000000000000000000000000000000"
+      },
+      "transferRemote": {
+        "ok": true,
+        "value": "0x021b2542f81fea3aa909bd33608cb5e59a0916ce6f5af0e43a35e93684d089cf"
+      }
+    },
+    {
+      "token": "HBTT",
+      "address": "0x04a276255FfB8487E94b07a2187aB56A281bb6eE",
+      "quoteGasPayment": {
+        "ok": true,
+        "value": "0"
+      },
+      "hook": {
+        "ok": true,
+        "value": "0x0000000000000000000000000000000000000000"
+      },
+      "transferRemote": {
+        "ok": true,
+        "value": "0xb9b82d3e5cc0eec27c8b8e482d85dd8d79c7a0fef6e75a42962cf1624d024b19"
+      }
+    }
+  ],
+  "hook": {
+    "address": "0xF11C364Da4B5e22b3040be8EA77DccDBfD1277De",
+    "codeBytes": 2577,
+    "selectors": [
+      "0x715018a6",
+      "0xde523cf3",
+      "0xde523cf3",
+      "0xf07c1f47",
+      "0xf2fde38b",
+      "0x715018a6",
+      "0x8da5cb5b",
+      "0xa4982fde",
+      "0x2113522a",
+      "0x2113522a",
+      "0x256fec88",
+      "0x56d5d475",
+      "0x0e72cc06",
+      "0x3565b604",
+      "0xffffffff",
+      "0x31790556",
+      "0x31461039",
+      "0x616c6c65",
+      "0xffffffff",
+      "0x43000821"
+    ],
+    "known": {
+      "hookType()": "0xe445e7dd",
+      "quoteDispatch(bytes,bytes)": "0xaaccd230",
+      "postDispatch(bytes,bytes)": "0x086011b9",
+      "owner()": "0x8da5cb5b",
+      "transferOwnership(address)": "0xf2fde38b",
+      "token()": "0xfc0c546a",
+      "interchainSecurityModule()": "0xde523cf3",
+      "initialize(address)": "0xc4d66de8",
+      "mailbox()": "0xd5438eae",
+      "setDefaultHook(address)": "0x99b04809"
+    }
+  }
+}

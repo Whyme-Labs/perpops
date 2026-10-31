@@ -1,0 +1,128 @@
+{
+  "schemaVersion": 1,
+  "evidence": "Offline invocation of the actual pinned upstream closePosition and placePerp helpers. No network calls or transactions.",
+  "upstreamRevision": "4e75896896e024c03e2033d5920514f249998cd6",
+  "verifiedSourceSha256": {
+    "orders.ts": "a9ed57032c74315deafaea99a9ce349875b5bcd4b6eb0d09e2c5065c9402c583",
+    "markets.ts": "95dfbbb84d114927f5a5df87f4a0d96114d3904cb98a8c06c42c3823880a0520",
+    "exchange.ts": "4a2e33463f9d023fa4959aee02bb225fe1987478f4970b8137dfe1084fc33293",
+    "LICENSE": "d7ea33c1f248d6f4e865fe6bf417593c2410979e710a3387263d6ffc323a9ce3"
+  },
+  "sdkVersion": "0.32.1",
+  "nodeVersion": "v24.22.1",
+  "baseDecimals": 8,
+  "assertionsPassed": true,
+  "scenarios": [
+    {
+      "scenario": "unchanged long control",
+      "previewQuantityRaw": "100000",
+      "currentPositionRaw": "100000",
+      "fraction": 1,
+      "capturedQuantityRaw": "100000",
+      "capturedSide": "sell",
+      "modeledFullFillPositionRaw": "0",
+      "crossedZero": false,
+      "calls": [
+        "preview",
+        "positions",
+        "book",
+        "captured-order"
+      ]
+    },
+    {
+      "scenario": "long reduced between reads",
+      "previewQuantityRaw": "100000",
+      "currentPositionRaw": "40000",
+      "fraction": 1,
+      "capturedQuantityRaw": "100000",
+      "capturedSide": "sell",
+      "modeledFullFillPositionRaw": "-60000",
+      "crossedZero": true,
+      "calls": [
+        "preview",
+        "positions",
+        "book",
+        "captured-order"
+      ]
+    },
+    {
+      "scenario": "unchanged short control",
+      "previewQuantityRaw": "100000",
+      "currentPositionRaw": "-100000",
+      "fraction": 1,
+      "capturedQuantityRaw": "100000",
+      "capturedSide": "buy",
+      "modeledFullFillPositionRaw": "0",
+      "crossedZero": false,
+      "calls": [
+        "preview",
+        "positions",
+        "book",
+        "captured-order"
+      ]
+    },
+    {
+      "scenario": "short reduced between reads",
+      "previewQuantityRaw": "100000",
+      "currentPositionRaw": "-40000",
+      "fraction": 1,
+      "capturedQuantityRaw": "100000",
+      "capturedSide": "buy",
+      "modeledFullFillPositionRaw": "60000",
+      "crossedZero": true,
+      "calls": [
+        "preview",
+        "positions",
+        "book",
+        "captured-order"
+      ]
+    },
+    {
+      "scenario": "partial close after reduction",
+      "previewQuantityRaw": "100000",
+      "currentPositionRaw": "40000",
+      "fraction": 0.5,
+      "capturedQuantityRaw": "50000",
+      "capturedSide": "sell",
+      "modeledFullFillPositionRaw": "-10000",
+      "crossedZero": true,
+      "calls": [
+        "preview",
+        "positions",
+        "book",
+        "captured-order"
+      ]
+    },
+    {
+      "scenario": "position increased control",
+      "previewQuantityRaw": "100000",
+      "currentPositionRaw": "120000",
+      "fraction": 1,
+      "capturedQuantityRaw": "100000",
+      "capturedSide": "sell",
+      "modeledFullFillPositionRaw": "20000",
+      "crossedZero": false,
+      "calls": [
+        "preview",
+        "positions",
+        "book",
+        "captured-order"
+      ]
+    },
+    {
+      "scenario": "already flat control",
+      "previewQuantityRaw": "100000",
+      "currentPositionRaw": "0",
+      "fraction": 1,
+      "capturedQuantityRaw": "0",
+      "capturedSide": null,
+      "modeledFullFillPositionRaw": "0",
+      "crossedZero": false,
+      "calls": [
+        "preview",
+        "positions"
+      ]
+    }
+  ],
+  "limitation": "Only the captured order parameters are observed from upstream code. Resulting positions assume full fill, sufficient margin/liquidity and no further state change; no on-chain reversal or financial loss is claimed."
+}

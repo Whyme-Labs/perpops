@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#101719" />
+    <meta name="description" content="PerpOps is a target-position execution workspace with recoverable intents and transaction receipts." />
+    <title>PerpOps · Execution workspace</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <script type="module" src="/app.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#workspace">Skip to workspace</a>
+    <div class="shell">
+      <header class="topbar">
+        <a href="/" class="wordmark" aria-label="PerpOps home">
+          <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><path d="M8 24V8h9a5 5 0 0 1 0 10h-4M13 24V13h4" stroke="currentColor" stroke-width="2.2" stroke-linecap="square"/></svg></span>
+          <span>PerpOps<span class="wordmark-caption">Execution, accounted for.</span></span>
+        </a>
+        <nav class="topnav" aria-label="Primary navigation">
+          <a href="#workspace" class="active">Workspace</a>
+          <a href="#intent-history">Intent history</a>
+        </nav>
+        <div class="connection-group">
+          <span class="environment-badge" id="environment-badge"><span class="environment-dot"></span><span id="environment-label">Connecting</span></span>
+          <span class="connection-state" id="connection-state" role="status">Checking server</span>
+        </div>
+      </header>
+
+      <main id="workspace">
+        <section class="page-heading" aria-labelledby="page-title">
+          <div>
+            <p class="eyebrow"><span class="short-rule"></span> Perpetuals / execution desk</p>
+            <h1 id="page-title">Trade with a record.</h1>
+            <p class="page-description">Set a target position. Follow the transaction.<br class="desktop-break" /> Recover the intent when a response goes missing.</p>
+          </div>
+          <div class="heading-actions">
+            <button type="button" id="run-demo" class="button button-primary" disabled>
+              <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m7 4 8 6-8 6V4Z" fill="currentColor"/></svg>
+              <span>Run recovery demo</span>
+            </button>
+            <p class="action-note" id="demo-note">Local simulation. No real funds.</p>
+          </div>
+        </section>
+
+        <div id="global-alert" class="alert" role="alert" hidden></div>
+        <section class="mode-notice" id="mode-notice" aria-label="Environment information">
+          <span class="notice-icon" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none"><rect x="4" y="4" width="12" height="12" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="m7 10 2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <p id="mode-notice-text">Connecting to the execution service. Account data will appear after the server responds.</p>
+          <span class="notice-code" id="market-label">BTC-PERP</span>
+        </section>
+
+        <section class="position-strip" aria-label="Position overview">
+          <div class="position-metric"><div class="metric-label">Current position<span class="metric-dot current-dot"></span></div><p class="metric-value" id="current-position">&mdash;</p><span class="metric-caption" id="current-caption">Awaiting account state</span></div>
+          <div class="position-metric"><div class="metric-label">Target position<span class="metric-dot target-dot"></span></div><p class="metric-value" id="target-position">&mdash;</p><span class="metric-caption" id="target-caption">No intent selected</span></div>
+          <div class="position-metric"><div class="metric-label">Pending orders<span class="metric-dot pending-dot"></span></div><p class="metric-value" id="pending-position">&mdash;</p><span class="metric-caption" id="pending-caption">Awaiting account state</span></div>
+          <div class="position-metric last-metric"><div class="metric-label">Account state<svg class="metric-icon" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="5.5" stroke="currentColor"/><path d="M8 4.5V8l2 1.5" stroke="currentColor" stroke-linecap="round"/></svg></div><p class="metric-value text-metric" id="account-state">Connecting</p><span class="metric-caption" id="account-caption">No snapshot received</span></div>
+        </section>
+
+        <div class="workspace-grid">
+          <section class="card composer-card" aria-labelledby="composer-title">
+            <div class="card-heading"><div><p class="section-number">01 / Create</p><h2 id="composer-title">Target an outcome.</h2></div><span class="small-badge" id="composer-market">BTC-PERP</span></div>
+            <p class="card-description">Enter the position you want to hold. The service calculates the order needed to get there.</p>
+            <form id="intent-form">
+              <div class="field-header"><label for="target-input">Target position</label><span class="field-help">Negative values open a short</span></div>
+              <div class="quantity-input"><input id="target-input" name="target" type="text" inputmode="decimal" value="0.001" autocomplete="off" spellcheck="false" required aria-describedby="target-help" /><span class="input-unit" id="target-unit">BTC</span></div>
+              <div class="preset-row" aria-label="Target position presets"><button type="button" class="preset-button" data-target="0.001">Long 0.001</button><button type="button" class="preset-button" data-target="0">Flat</button><button type="button" class="preset-button" data-target="-0.001">Short 0.001</button></div>
+              <p id="target-help" class="field-footnote">The target is your total position, not an additional order.</p>
+              <div class="form-divider"></div>
+              <div class="field-row">
+                <div class="form-field"><label for="max-position-input">Position limit <span class="unit-label" id="cap-unit">BTC</span></label><input class="text-input" id="max-position-input" name="maxPosition" type="text" inputmode="decimal" value="0.002" autocomplete="off" spellcheck="false" required /><p class="field-footnote">Includes outstanding orders.</p></div>
+                <div class="form-field"><label for="price-input">Limit price <span class="unit-label">USDso</span></label><input class="text-input" id="price-input" name="limitPrice" type="text" inputmode="decimal" value="100100" autocomplete="off" spellcheck="false" required /><p class="field-footnote" id="price-help">A price limit does not ensure a fill.</p></div>
+              </div>
+              <div class="intent-key-row"><div><span class="mini-label">Request identity</span><code id="request-id-preview">Assigned when submitted</code></div><span class="key-icon" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none"><circle cx="6.5" cy="7" r="3.5" stroke="currentColor" stroke-width="1.5"/><path d="m9 9.5 6.5 6.5m-2-2 2-2m-4 0 2-2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span></div>
+              <div id="form-error" class="inline-error" role="alert" hidden></div>
+              <button type="submit" id="submit-intent" class="button button-primary button-full" disabled><span>Create execution intent</span><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            </form>
+            <p class="composer-footer"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m8 2 5 2v4c0 3-5 6-5 6S3 11 3 8V4l5-2Z" stroke="currentColor" stroke-width="1.1"/><path d="m5.5 7.5 1.8 1.8 3.2-3.2" stroke="currentColor" stroke-width="1.1"/></svg>No private keys are entered in this workspace.</p>
+          </section>
+
+          <aside class="card fault-card" aria-labelledby="fault-title">
+            <div class="card-heading"><div><p class="section-number">02 / Challenge</p><h2 id="fault-title">Recovery lab</h2></div><span class="lab-badge">SIMULATION</span></div>
+            <p class="card-description">Introduce a failure in the local exchange adapter, then inspect how the intent recovers.</p>
+            <div class="fault-options" role="radiogroup" aria-label="Choose a simulated failure">
+              <label class="fault-option"><input type="radio" name="fault" value="drop_ack" checked /><span class="fault-radio"></span><span class="fault-option-copy"><strong>Drop acknowledgement</strong><span>The order lands. Its response does not.</span></span><span class="fault-number">01</span></label>
+              <label class="fault-option"><input type="radio" name="fault" value="drop_before_send" /><span class="fault-radio"></span><span class="fault-option-copy"><strong>Fail before the exchange</strong><span>The saved transaction never reaches the exchange.</span></span><span class="fault-number">02</span></label>
+              <label class="fault-option"><input type="radio" name="fault" value="stale_read" /><span class="fault-radio"></span><span class="fault-option-copy"><strong>Return a stale read</strong><span>The account snapshot trails the transaction.</span></span><span class="fault-number">03</span></label>
+              <label class="fault-option"><input type="radio" name="fault" value="partial_fill" /><span class="fault-radio"></span><span class="fault-option-copy"><strong>Fill part of the order</strong><span>The remaining quantity stays unresolved.</span></span><span class="fault-number">04</span></label>
+            </div>
+            <button type="button" id="arm-fault" class="button button-secondary button-full" disabled><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m11 2-7 9h5l-1 7 8-10h-5l1-6Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg><span>Arm next execution</span></button>
+            <div class="fault-state" id="fault-state" role="status"><span class="state-dot"></span><span>No fault armed</span></div>
+            <button type="button" id="settle-simulation" class="text-button settle-button" disabled>Release simulated delay <span aria-hidden="true">↗</span></button>
+            <div class="lab-explainer"><span class="mini-label">What to look for</span><p>Recovery should reconcile the existing transaction before it attempts another order. A retry uses the same request identity.</p></div>
+          </aside>
+        </div>
+
+        <div class="records-grid">
+          <section class="card history-card" id="intent-history" aria-labelledby="history-title">
+            <div class="card-heading"><div><p class="section-number">03 / Inspect</p><h2 id="history-title">Intent history <span id="intent-count" class="count-badge">0</span></h2></div><button type="button" id="refresh-state" class="icon-button" aria-label="Refresh account and intent history" title="Refresh" disabled><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M16 7a6.5 6.5 0 1 0 .2 5M16 3v4h-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div>
+            <div class="history-table-wrap"><table class="history-table"><thead><tr><th scope="col">Intent</th><th scope="col">Target</th><th scope="col">Status</th><th scope="col">Created</th></tr></thead><tbody id="intent-list"></tbody></table></div>
+            <div class="empty-state" id="history-empty"><span class="empty-symbol" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none"><path d="M11 7h14l5 5v21H11V7Z" stroke="currentColor" stroke-width="1.3"/><path d="M24 7v7h6M16 20h9m-9 5h6" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg></span><h3>Your first intent starts here.</h3><p>Create a target above, or run the recovery demo to follow an execution through a missing response.</p></div>
+            <div class="history-footer"><span class="state-dot"></span><span id="history-footnote">Receipts come from the execution service.</span></div>
+          </section>
+
+          <section class="card detail-card" aria-labelledby="detail-title">
+            <div class="card-heading"><div><p class="section-number">Execution detail</p><h2 id="detail-title">The full trail.</h2></div><span id="detail-status" hidden></span></div>
+            <div id="detail-empty" class="detail-empty"><div class="timeline-placeholder" aria-hidden="true"><span></span><span></span><span></span></div><p>Select an intent to inspect its transaction, recovery steps, and receipt.</p></div>
+            <div id="detail-content" hidden>
+              <div class="selected-intent"><span class="mini-label">Intent ID</span><code id="selected-id"></code></div>
+              <div class="detail-metrics"><div><span class="mini-label">Target</span><strong id="selected-target"></strong></div><div><span class="mini-label">Transaction</span><span id="selected-transaction">Not submitted</span></div></div>
+              <ol id="timeline" class="timeline"></ol>
+              <div id="detail-message" class="detail-message" hidden></div>
+              <div class="recovery-actions"><button type="button" id="recover-intent" class="button button-secondary" disabled>Recover intent</button><button type="button" id="retry-intent" class="button button-quiet" disabled>Retry same request</button></div>
+              <div id="rebroadcast-actions" class="rebroadcast-actions" hidden><button type="button" id="rebroadcast-intent" class="button button-secondary button-full" disabled>Resend saved transaction</button><p>Reconciles first, then resends the exact saved transaction when allowed. Its order, nonce and hash stay the same.</p></div>
+              <div class="receipt-actions"><button type="button" id="export-receipt" class="text-button" disabled><svg viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M9 2v9m-3-3 3 3 3-3M3 12v3h12v-3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>Export receipt</button><button type="button" id="close-position" class="text-button" disabled>Prepare close <span aria-hidden="true">↗</span></button></div>
+              <p class="close-note" id="close-note">Prepare close sets a zero target. Review its price limit, then create a new intent.</p>
+              <button type="button" id="cancel-intent" class="text-button stop-intent" disabled title="Stop future execution for this intent. Existing positions remain open.">Stop this intent</button>
+              <details class="raw-receipt"><summary>View receipt JSON</summary><pre id="receipt-json"></pre></details>
+            </div>
+          </section>
+        </div>
+
+        <footer class="page-footer"><span><span class="footer-mark" aria-hidden="true"></span>PerpOps <span class="footer-divider">/</span> Target-position execution</span><p>Execution controls cannot guarantee fills or prevent trading losses.</p><span id="last-updated">Waiting for service</span></footer>
+      </main>
+    </div>
+    <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+  </body>
+</html>

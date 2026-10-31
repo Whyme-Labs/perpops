@@ -1,0 +1,26 @@
+{
+  "repository": "https://github.com/somnia-chain/dreamdex-bot-kit",
+  "revision": "4e75896896e024c03e2033d5920514f249998cd6",
+  "files": {
+    "orders.ts": {
+      "path": "packages/perp-core/src/orders.ts",
+      "sha256": "a9ed57032c74315deafaea99a9ce349875b5bcd4b6eb0d09e2c5065c9402c583",
+      "url": "https://github.com/somnia-chain/dreamdex-bot-kit/blob/4e75896896e024c03e2033d5920514f249998cd6/packages/perp-core/src/orders.ts"
+    },
+    "markets.ts": {
+      "path": "packages/perp-core/src/markets.ts",
+      "sha256": "95dfbbb84d114927f5a5df87f4a0d96114d3904cb98a8c06c42c3823880a0520",
+      "url": "https://github.com/somnia-chain/dreamdex-bot-kit/blob/4e75896896e024c03e2033d5920514f249998cd6/packages/perp-core/src/markets.ts"
+    },
+    "exchange.ts": {
+      "path": "packages/perp-core/src/exchange.ts",
+      "sha256": "4a2e33463f9d023fa4959aee02bb225fe1987478f4970b8137dfe1084fc33293",
+      "url": "https://github.com/somnia-chain/dreamdex-bot-kit/blob/4e75896896e024c03e2033d5920514f249998cd6/packages/perp-core/src/exchange.ts"
+    },
+    "LICENSE": {
+      "path": "LICENSE",
+      "sha256": "d7ea33c1f248d6f4e865fe6bf417593c2410979e710a3387263d6ffc323a9ce3",
+      "url": "https://github.com/somnia-chain/dreamdex-bot-kit/blob/4e75896896e024c03e2033d5920514f249998cd6/LICENSE"
+    }
+  }
+}

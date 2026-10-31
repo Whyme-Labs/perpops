@@ -1,0 +1,79 @@
+
+> @whyme-labs/perpops@0.2.0 check
+> npm run typecheck && npm test
+
+
+> @whyme-labs/perpops@0.2.0 typecheck
+> tsc --noEmit
+
+
+> @whyme-labs/perpops@0.2.0 test
+> node --test --test-isolation=none test/*.test.ts
+
+✔ same instruction normalizes numeric text, conflicting payload never signs again (29.713337ms)
+✔ unknown remote outcome survives its deadline and blocks a new ID and cancellation (12.046135ms)
+✔ a receipt lookup error cannot authorize a replacement or another instruction (14.054352ms)
+✔ receipt block hash must match a snapshot at the same block (18.536509ms)
+✔ a stale post-receipt position cannot produce an IOC residual (16.662341ms)
+✔ pending buys and sells cannot net out before target 0.002 (8.410528ms)
+✔ pending buys and sells cannot net out before target -0.002 (8.64106ms)
+✔ resting orders below the quantity cap still block this dedicated IOC executor (11.406046ms)
+✔ sub-lot precision is rejected before persistence or signing (7.084773ms)
+✔ deadline reached during signing persists the attempt but never starts a send (10.306049ms)
+✔ a non-finite snapshot timestamp fails closed (7.166247ms)
+✔ malformed serialized transaction bytes never reach broadcast (7.237557ms)
+✔ position drift while signing blocks the old quantity before send (8.753877ms)
+✔ a partial fill must retain its canonical receipt before preparing a residual (11.26596ms)
+✔ exported evidence contains neither raw transaction bytes nor a private key field (14.497047ms)
+✔ SIGKILL after_sign recovers the persisted transaction without preparing another (176.094896ms)
+✔ SIGKILL after_broadcast recovers the persisted transaction without preparing another (169.023937ms)
+✔ money is exact across asset precisions without IEEE-754 rounding (0.579558ms)
+✔ pending buys and sells are bounded independently for every fill combination (0.668702ms)
+✔ IOC encoding preserves exact base units, expiry nanoseconds and zero builder fee (3.126453ms)
+✔ snapshot reads owner orders at one block and counts remaining quantity, including both sides (16.545134ms)
+✔ prepare locally signs a valid transaction but never broadcasts it (22.557059ms)
+✔ wrong chain, stale mark, unsupported account exposure and resting orders fail closed (35.466166ms)
+✔ chain 50383 on the older Hideki regenesis cannot describe, snapshot, diagnose or confirm (0.868534ms)
+✔ signing rechecks network identity after successful market discovery (4.092271ms)
+✔ broadcast rechecks regenesis identity before submitting already signed bytes (6.700993ms)
+✔ prepared bytes cannot be broadcast under another recorded hash or nonce (9.961217ms)
+✔ a dropped send acknowledgement is uncertain and never leaks serialized bytes in the error (10.41321ms)
+✔ receipt reports only matching canonical transactions with two confirmations (1.859438ms)
+✔ read-only mode and mismatched account configuration cannot sign (5.104754ms)
+✔ snapshot transport errors cannot leak RPC credentials into journal events or exported receipts (14.44734ms)
+✔ receipt transport errors cannot leak RPC credentials into journal events or exported receipts (27.904635ms)
+✔ HTTP offline state and unexpected-error responses redact credentialized RPC URLs (60.987705ms)
+✔ HTTP workbench completes a real local recovery flow and rejects cross-origin writes (48.748925ms)
+✔ a signed attempt survives a read-only restart and resumes its original bytes after trading is enabled (28.194511ms)
+✔ an interrupted unsent transaction can be explicitly rebroadcast after restart with identical bytes and nonce (28.22239ms)
+✔ rebroadcast reconciles an existing canonical receipt without sending again (19.050077ms)
+✔ unknown receipt plus changed position prevents rebroadcast and keeps the instruction unresolved (19.393048ms)
+✔ an expired unknown transaction is retained and cannot be rebroadcast or cancelled (19.15271ms)
+✔ read-only recovery cannot rebroadcast, and enabling trading resumes the same transaction (27.795175ms)
+✔ a receipt transport error cannot authorize rebroadcast or leak provider credentials (15.002427ms)
+✔ concurrent explicit retries retain one attempt and execute it once (25.497277ms)
+✔ rebroadcast never prepares the remainder of a confirmed partial fill (22.828772ms)
+✔ a missing or changed partial-fill receipt preserves confirmed evidence and blocks rebroadcast (30.518978ms)
+✔ a deadline passing during the rebroadcast snapshot prevents sending and keeps the saved attempt unresolved (18.214712ms)
+✔ same ID survives a lost acknowledgement and an actual database reopen without another trade (26.314956ms)
+✔ partial IOC reconciliation prepares only the remaining quantity (19.196427ms)
+✔ stale account state after a confirmed receipt blocks every replacement order (27.217589ms)
+✔ unknown receipt blocks competing instructions and cancellation (17.37425ms)
+✔ concurrent replays of one request produce one fill (23.370058ms)
+✔ closing is a separate intent and preserves the previous receipt (23.830079ms)
+✔ one writer per journal, idempotent close, persistent sidecar (0.928453ms)
+✔ separate journals do not share a writer lock (0.672696ms)
+✔ journal symlinks resolve to the same writer lock (0.694567ms)
+✔ real process contention and SIGKILL recovery preserve the lock file (182.848393ms)
+✔ in-memory journals cannot claim process exclusion (0.164891ms)
+ℹ tests 56
+ℹ suites 0
+ℹ pass 56
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1998.911536
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.

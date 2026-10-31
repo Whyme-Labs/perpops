@@ -1,0 +1,38 @@
+{
+  "name": "@whyme-labs/perpops",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "description": "A durable target-position executor and recovery workbench for DreamDEX testnet.",
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "scripts": {
+    "start": "node --env-file-if-exists=.env src/server.ts",
+    "test": "node --test --test-isolation=none test/*.test.ts",
+    "typecheck": "tsc --noEmit",
+    "check": "npm run typecheck && npm test",
+    "demo": "node src/cli.ts demo",
+    "doctor": "node --env-file-if-exists=.env src/cli.ts doctor",
+    "wallet:create": "node src/cli.ts wallet:create",
+    "test:browser": "node scripts/browser-smoke.cjs",
+    "demo:record": "node scripts/record-demo.cjs",
+    "feedback:close": "node scripts/repro-close-race.cjs",
+    "feedback:bridge": "node scripts/repro-bridge-quote.mjs"
+  },
+  "dependencies": {
+    "@somnia-chain/markets-sdk": "0.32.1",
+    "viem": "2.38.5",
+    "zod": "3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "24.10.0",
+    "playwright": "1.62.1",
+    "typescript": "5.9.3"
+  },
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Whyme-Labs/perpops.git"
+  }
+}

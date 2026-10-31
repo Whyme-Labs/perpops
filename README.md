@@ -19,6 +19,30 @@ receipts are not on-chain evidence.
 Start with the [demo guide](docs/demo-script.md), [verification](docs/verification.md),
 and [submission package](docs/submission.md).
 
+## Bounty feedback and demo
+
+Two independently reproduced reports accompany the application:
+
+- [Close helper retains an older quantity after the position shrinks](feedback/001-close-position-stale-quantity.md).
+  The offline harness invokes unchanged official bot-kit functions and checks
+  seven controlled scenarios.
+- [Documented USDso bridge quote reverts](feedback/002-usdso-bridge-quote.md).
+  A read-only RPC reproduction compares five routes at the same canonical block.
+
+After installing dependencies with `npm ci`:
+
+```bash
+npm run feedback:close
+npm run feedback:bridge
+```
+
+The reports are prepared for the Feedback track. No report is claimed accepted
+or first. The MVP's actual testnet opening and closing orders remain pending
+initial funding. [Funding observations and next steps](docs/funding.md) explain
+the available route and the remaining faucet access requirement.
+
+[Watch the 100-second captioned local demonstration](docs/demo.mp4).
+
 ## Run the workbench
 
 Requires Node.js 24 or later.

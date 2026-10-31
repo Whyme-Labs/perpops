@@ -1,0 +1,74 @@
+{
+  "at": "2026-10-31T05:44:38.134Z",
+  "account": "0x46A99DD5a6852c10D7640f12081A978ADD9D5CD3",
+  "sourceBlock": {
+    "number": "528511550",
+    "hash": "0x8fda158f2b91d9f182176b59d334e136b99768f9d8754807a45d3f0645d882fc"
+  },
+  "destinationBlock": {
+    "number": "37722234",
+    "hash": "0xae6dce72327fba12a2d14a2de176b53673ce62c07e9dc1e159f90e274206302d"
+  },
+  "reads": [
+    {
+      "label": "WETH.symbol",
+      "ok": true,
+      "value": "WETH"
+    },
+    {
+      "label": "WETH.decimals",
+      "ok": true,
+      "value": 18
+    },
+    {
+      "label": "WETH.mint(0.05) simulation",
+      "ok": true,
+      "value": null
+    },
+    {
+      "label": "Faucet.requestTokens(WETH0.05) simulation",
+      "ok": true,
+      "value": null
+    },
+    {
+      "label": "Hideki WETH/USDso bid levels",
+      "ok": true,
+      "value": [
+        {
+          "price": "2239870000000000000000",
+          "quantity": "44700000000000000"
+        },
+        {
+          "price": "2238730000000000000000",
+          "quantity": "55100000000000000"
+        },
+        {
+          "price": "2237630000000000000000",
+          "quantity": "64300000000000000"
+        },
+        {
+          "price": "2236500000000000000000",
+          "quantity": "73500000000000000"
+        },
+        {
+          "price": "2235370000000000000000",
+          "quantity": "82700000000000000"
+        }
+      ]
+    },
+    {
+      "label": "Hideki WETH/USDso grid",
+      "ok": true,
+      "value": {
+        "tickSize": "10000000000000000",
+        "minQuantity": "1000000000000000",
+        "lotSize": "100000000000000"
+      }
+    },
+    {
+      "label": "Hideki MarginBank deposit(0) simulation",
+      "ok": false,
+      "error": "The contract function \"deposit\" reverted with the following signature:\n0x2c5211c6"
+    }
+  ]
+}

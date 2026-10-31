@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "notes": [
+    "Actual API recovery demo, reconciliation, and repeated same-ID request preserve one transaction and 0.001 BTC exposure.",
+    "Receipt downloads valid JSON without a serialized transaction or private key.",
+    "Prepare close populates a zero target and a sell-side price; submitting it creates a separate completed intent.",
+    "Partial fill is visible as 0.0005 BTC; resume fills only the 0.0005 remainder.",
+    "An unmarketable limit pauses before submitting; Stop this intent cancels it and unlocks the composer.",
+    "Stale-read delay can be released and the confirmed intent reconciled without an additional transaction.",
+    "Desktop 1440px and mobile 375px have no document-level horizontal overflow; mobile close workflow completes.",
+    "A failure before the exchange leaves zero exposure; explicit resend completes with the same saved hash and nonce and one prepared transaction.",
+    "No browser JavaScript or console errors."
+  ],
+  "finalStats": {
+    "intentCount": 8,
+    "completed": 7,
+    "transactionCount": 8,
+    "recovered": 3
+  },
+  "directory": "/tmp/perpops-ui-5IYZ3i"
+}

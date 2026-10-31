@@ -1,0 +1,119 @@
+{
+  "evidence": "local simulation, not an on-chain transaction",
+  "interruptedStatus": "uncertain",
+  "recoveredStatus": "completed",
+  "sameTransaction": true,
+  "counts": {
+    "broadcasts": 1,
+    "executions": 1,
+    "prepared": 1
+  },
+  "receipt": {
+    "schemaVersion": 1,
+    "mode": "simulation",
+    "network": 0,
+    "account": "local-demo-account",
+    "market": "BTC-PERP",
+    "exportedAt": "2026-10-30T02:04:05.784Z",
+    "scope": "One dedicated account and one execution writer. Quantity limits are not loss guarantees. Simulation receipts are not on-chain evidence.",
+    "intent": {
+      "id": "7c278f10-8e96-4f48-988f-c95891c44bab",
+      "target": "0.001",
+      "maxPosition": "0.002",
+      "limitPrice": "100100",
+      "deadline": "2026-10-30T02:14:05.768Z",
+      "createdAt": 1793325845771,
+      "updatedAt": 1793325845783,
+      "status": "completed",
+      "message": "The confirmed account position matches the target.",
+      "attempts": [
+        {
+          "number": 1,
+          "hash": "0x7ba32792923fd1fd5092fef555abf5218a1096fa0bd9e277c6e81c291dfdd54f",
+          "nonce": 0,
+          "side": "buy",
+          "quantity": "0.001",
+          "limitPrice": "100100",
+          "reduceOnly": false,
+          "phase": "confirmed",
+          "receipt": {
+            "blockNumber": "1001",
+            "blockHash": "0x51b4ed7782edcdcff19dde49c457c8594e0bc08808141355704dcb14b4534871",
+            "success": true
+          },
+          "beforePosition": "0",
+          "afterPosition": "0.001"
+        }
+      ],
+      "events": [
+        {
+          "sequence": 1,
+          "type": "intent_recorded",
+          "at": 1793325845771,
+          "message": "Instruction recorded.",
+          "data": {}
+        },
+        {
+          "sequence": 2,
+          "type": "transaction_prepared",
+          "at": 1793325845774,
+          "message": "Signed transaction persisted before broadcast.",
+          "data": {
+            "hash": "0x7ba32792923fd1fd5092fef555abf5218a1096fa0bd9e277c6e81c291dfdd54f",
+            "nonce": 0,
+            "quantity": "0.001",
+            "side": "buy",
+            "closeProtection": "not_a_close"
+          }
+        },
+        {
+          "sequence": 3,
+          "type": "send_started",
+          "at": 1793325845775,
+          "message": "Broadcast started. This transaction must be reconciled before any new order.",
+          "data": {
+            "hash": "0x7ba32792923fd1fd5092fef555abf5218a1096fa0bd9e277c6e81c291dfdd54f"
+          }
+        },
+        {
+          "sequence": 4,
+          "type": "broadcast_uncertain",
+          "at": 1793325845778,
+          "message": "The response was not confirmed. The simulated exchange executed the order, then its response was deliberately dropped.",
+          "data": {
+            "hash": "0x7ba32792923fd1fd5092fef555abf5218a1096fa0bd9e277c6e81c291dfdd54f"
+          }
+        },
+        {
+          "sequence": 5,
+          "type": "request_replayed",
+          "at": 1793325845780,
+          "message": "The same instruction was received again; its existing record was reused.",
+          "data": {}
+        },
+        {
+          "sequence": 6,
+          "type": "receipt_confirmed",
+          "at": 1793325845782,
+          "message": "Transaction confirmed. Checking the resulting account state.",
+          "data": {
+            "hash": "0x7ba32792923fd1fd5092fef555abf5218a1096fa0bd9e277c6e81c291dfdd54f",
+            "blockNumber": "1001",
+            "success": true
+          }
+        },
+        {
+          "sequence": 7,
+          "type": "target_reached",
+          "at": 1793325845783,
+          "message": "The confirmed account position matches the target.",
+          "data": {
+            "position": "0.001",
+            "filledQuantity": "0.001",
+            "blockNumber": "1001"
+          }
+        }
+      ]
+    }
+  }
+}
