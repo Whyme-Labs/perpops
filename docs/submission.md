@@ -10,7 +10,11 @@ order evidence before it meets the event's stated execution requirement.
 No bounty entry or public social post has been submitted by this project. An
 accepted report, award or first-report status is not claimed.
 
-Repository: https://github.com/Whyme-Labs/perpops
+Public repository: https://github.com/Whyme-Labs/perpops
+
+Judge page: https://perpops-feedback.pages.dev/
+
+The judge page serves both reports, the raw November 1 evidence, a standalone reproduction ZIP and the captioned simulation video. A clean Chrome session retrieved all four downloads and verified their SHA256 hashes against the local files.
 
 ## Feedback submission text
 
@@ -119,8 +123,7 @@ loss protection or unconditional exactly-once exchange effects.
 
 ## Submission actions outside the build
 
-- Give judges access to this repository. It was created private. Publish this
-  standalone repository or grant the access the organizer requests.
+- Repository access for judges is complete. The two Feedback reports and reproduction code are public.
 - Confirm the email used on DoraHacks is whitelisted through the organizer's
   official process.
 - Submit the feedback report files and their evidence through the bounty's

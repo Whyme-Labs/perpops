@@ -16,8 +16,7 @@ This standalone repository includes a durable local exchange simulator and a
 DreamDEX Hideki adapter. The interface labels those modes explicitly. Simulation
 receipts are not on-chain evidence.
 
-Start with the [demo guide](docs/demo-script.md), [verification](docs/verification.md),
-and [submission package](docs/submission.md).
+[Review the two reports and watch the demo](https://perpops-feedback.pages.dev/). The judge page includes a downloadable reproduction package. The [demo guide](docs/demo-script.md), [verification](docs/verification.md) and [submission package](docs/submission.md) are also available here.
 
 ## Bounty feedback and demo
 
