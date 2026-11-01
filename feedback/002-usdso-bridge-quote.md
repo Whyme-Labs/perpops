@@ -143,3 +143,7 @@ The SDK revision is npm release `0.32.1` (the exact version pinned in this repos
 No live bridge transfer was attempted, so delivery and relayer liveness remain unverified. A different bridged asset followed by a legitimate Hideki spot trade may still provide collateral. This report is about the documented USDso route's quote preflight and diagnostic hook mismatch.
 
 On 2026-10-31, no equivalent report was found in the inspected public findings of PhiBao/dreamdex-perps-feedback (15), Bortlesboat/dreamdex-perps-feedback (2), DanhCaTuanNgoc/lucid-perps (15), or DreamCat's SDK feedback. That does not rule out private or unpublished reports.
+
+## November 1 reproduction on macOS
+
+The USDso quote reverted with RPC code 3 and empty data at Shannon block `529372807`. The STT, WBTC, WETH and HBTT quotes each returned zero. Reading the block again returned the same hash. [Requests, responses and block hash](evidence/002-bridge-mac.json)

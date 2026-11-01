@@ -135,8 +135,6 @@ loss protection or unconditional exactly-once exchange effects.
 - [Organizer listing and whitelist instructions](https://www.eventbrite.com/e/dreamdex-perps-builder-bounty-tickets-2003605109819)
 - [Public copy of detailed rules](https://github.com/DanhCaTuanNgoc/lucid-perps/blob/main/hackathon_details.md)
 
-The organizer listing confirms the whitelist. The original detail page could not
-be retrieved in this build environment. Detailed track requirements and the
-reported deadline of November 1, 2026 at 23:59 UTC come from the public rules copy and
-should be checked in the submission interface. That reported cutoff is
-November 2, 2026 at 07:59 in Malaysia.
+On November 1, the official DoraHacks event page was checked in Chrome. It confirms the GitHub requirement, the per-item Feedback format and the whitelisted-email requirement. MVP entries also need real Tokyo testnet perp orders and links to two or three X posts tagging DreamDEX. The account registration form requires a public EVM reward address on Somnia mainnet.
+
+The event page shows two times. Its written timeline gives November 1 at 23:59 UTC (November 2 at 07:59 in Malaysia). Its event widget lists an extension to November 15 at 22:30 in Malaysia. Use the earlier cutoff unless the organizer confirms that the extension applies to the bounty.

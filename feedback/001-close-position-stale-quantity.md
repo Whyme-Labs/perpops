@@ -126,3 +126,7 @@ status; the organizer must check duplicates and determine acceptance and severit
 - Account 0x0000000000000000000000000000000000000001 is a fixture identifier.
   It is not funded or used for network calls.
 - No transaction hash exists for this offline reproduction.
+
+## November 1 reproduction on macOS
+
+Node 24.18.0 reproduced all seven scenarios using the pinned helper. In the shrinking-long case, the mock trader received a sell for 100000 raw units despite the later read showing a long of 40000. [Captured inputs and order calls](evidence/001-close-mac.json)

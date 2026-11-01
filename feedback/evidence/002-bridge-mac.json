@@ -1,0 +1,200 @@
+{
+  "observedAt": "2026-11-01T05:40:22.893Z",
+  "rpcUrl": "https://api.infra.testnet.somnia.network",
+  "chainId": 50312,
+  "destinationChainId": 50383,
+  "block": {
+    "number": 529372807,
+    "hash": "0x0008b4df94195362893dc338c58c7024da0d7060ddad449a46290bf530c25957",
+    "timestamp": 1793511620
+  },
+  "canonicalBlockUnchanged": true,
+  "expectedFailureObserved": true,
+  "controlsQuoteZero": true,
+  "observations": [
+    {
+      "token": "STT",
+      "address": "0x67CD0778A719099DAF2D346aD0Db0d9E6FF6674C",
+      "readings": {
+        "quoteGasPayment": {
+          "request": {
+            "to": "0x67CD0778A719099DAF2D346aD0Db0d9E6FF6674C",
+            "data": "0xf2ed8c53000000000000000000000000000000000000000000000000000000000000c4cf",
+            "block": "0x1f8d9687"
+          },
+          "jsonrpc": "2.0",
+          "id": 3,
+          "result": "0x0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "hook": {
+          "request": {
+            "to": "0x67CD0778A719099DAF2D346aD0Db0d9E6FF6674C",
+            "data": "0x7f5a7c7b",
+            "block": "0x1f8d9687"
+          },
+          "jsonrpc": "2.0",
+          "id": 8,
+          "result": "0x0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "enrolledRouter": {
+          "request": {
+            "to": "0x67CD0778A719099DAF2D346aD0Db0d9E6FF6674C",
+            "data": "0x2ead72f6000000000000000000000000000000000000000000000000000000000000c4cf",
+            "block": "0x1f8d9687"
+          },
+          "jsonrpc": "2.0",
+          "id": 13,
+          "result": "0x000000000000000000000000b04373932bc05347757da6b8a226d7657584ab35"
+        }
+      }
+    },
+    {
+      "token": "USDso",
+      "address": "0x94E2E7f4B2B0a8E3032c7D3ff3c86790BB5979E6",
+      "readings": {
+        "quoteGasPayment": {
+          "request": {
+            "to": "0x94E2E7f4B2B0a8E3032c7D3ff3c86790BB5979E6",
+            "data": "0xf2ed8c53000000000000000000000000000000000000000000000000000000000000c4cf",
+            "block": "0x1f8d9687"
+          },
+          "jsonrpc": "2.0",
+          "id": 4,
+          "error": {
+            "code": 3,
+            "message": "execution reverted",
+            "data": "0x"
+          }
+        },
+        "hook": {
+          "request": {
+            "to": "0x94E2E7f4B2B0a8E3032c7D3ff3c86790BB5979E6",
+            "data": "0x7f5a7c7b",
+            "block": "0x1f8d9687"
+          },
+          "jsonrpc": "2.0",
+          "id": 9,
+          "result": "0x000000000000000000000000f11c364da4b5e22b3040be8ea77dccdbfd1277de"
+        },
+        "enrolledRouter": {
+          "request": {
+            "to": "0x94E2E7f4B2B0a8E3032c7D3ff3c86790BB5979E6",
+            "data": "0x2ead72f6000000000000000000000000000000000000000000000000000000000000c4cf",
+            "block": "0x1f8d9687"
+          },
+          "jsonrpc": "2.0",
+          "id": 14,
+          "result": "0x000000000000000000000000ed7993a74dae1e6656b704a424dcd8711aaf4f72"
+        }
+      }
+    },
+    {
+      "token": "WBTC",
+      "address": "0x888d8C8090b8cDcEa5d05b1C206c2bFF18cd2DA9",
+      "readings": {
+        "quoteGasPayment": {
+          "request": {
+            "to": "0x888d8C8090b8cDcEa5d05b1C206c2bFF18cd2DA9",
+            "data": "0xf2ed8c53000000000000000000000000000000000000000000000000000000000000c4cf",
+            "block": "0x1f8d9687"
+          },
+          "jsonrpc": "2.0",
+          "id": 5,
+          "result": "0x0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "hook": {
+          "request": {
+            "to": "0x888d8C8090b8cDcEa5d05b1C206c2bFF18cd2DA9",
+            "data": "0x7f5a7c7b",
+            "block": "0x1f8d9687"
+          },
+          "jsonrpc": "2.0",
+          "id": 12,
+          "result": "0x0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "enrolledRouter": {
+          "request": {
+            "to": "0x888d8C8090b8cDcEa5d05b1C206c2bFF18cd2DA9",
+            "data": "0x2ead72f6000000000000000000000000000000000000000000000000000000000000c4cf",
+            "block": "0x1f8d9687"
+          },
+          "jsonrpc": "2.0",
+          "id": 15,
+          "result": "0x000000000000000000000000e97673c634ef069ecc0d95425cc8e62f99d27e0e"
+        }
+      }
+    },
+    {
+      "token": "WETH",
+      "address": "0x41C21248D6CC3883cd577D0eFEF3585b1358A8B2",
+      "readings": {
+        "quoteGasPayment": {
+          "request": {
+            "to": "0x41C21248D6CC3883cd577D0eFEF3585b1358A8B2",
+            "data": "0xf2ed8c53000000000000000000000000000000000000000000000000000000000000c4cf",
+            "block": "0x1f8d9687"
+          },
+          "jsonrpc": "2.0",
+          "id": 6,
+          "result": "0x0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "hook": {
+          "request": {
+            "to": "0x41C21248D6CC3883cd577D0eFEF3585b1358A8B2",
+            "data": "0x7f5a7c7b",
+            "block": "0x1f8d9687"
+          },
+          "jsonrpc": "2.0",
+          "id": 10,
+          "result": "0x0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "enrolledRouter": {
+          "request": {
+            "to": "0x41C21248D6CC3883cd577D0eFEF3585b1358A8B2",
+            "data": "0x2ead72f6000000000000000000000000000000000000000000000000000000000000c4cf",
+            "block": "0x1f8d9687"
+          },
+          "jsonrpc": "2.0",
+          "id": 16,
+          "result": "0x00000000000000000000000056115cb05652ac6117caa1152b630986a51d36b5"
+        }
+      }
+    },
+    {
+      "token": "HBTT",
+      "address": "0x04a276255FfB8487E94b07a2187aB56A281bb6eE",
+      "readings": {
+        "quoteGasPayment": {
+          "request": {
+            "to": "0x04a276255FfB8487E94b07a2187aB56A281bb6eE",
+            "data": "0xf2ed8c53000000000000000000000000000000000000000000000000000000000000c4cf",
+            "block": "0x1f8d9687"
+          },
+          "jsonrpc": "2.0",
+          "id": 7,
+          "result": "0x0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "hook": {
+          "request": {
+            "to": "0x04a276255FfB8487E94b07a2187aB56A281bb6eE",
+            "data": "0x7f5a7c7b",
+            "block": "0x1f8d9687"
+          },
+          "jsonrpc": "2.0",
+          "id": 11,
+          "result": "0x0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "enrolledRouter": {
+          "request": {
+            "to": "0x04a276255FfB8487E94b07a2187aB56A281bb6eE",
+            "data": "0x2ead72f6000000000000000000000000000000000000000000000000000000000000c4cf",
+            "block": "0x1f8d9687"
+          },
+          "jsonrpc": "2.0",
+          "id": 17,
+          "result": "0x0000000000000000000000000528dd3beef917db06a5249c9ea84b9d702b3a84"
+        }
+      }
+    }
+  ]
+}

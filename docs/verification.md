@@ -56,3 +56,9 @@ and [funding.md](funding.md).
 
 All automated app checks ran locally. No hosted CI, real-money trade, organizer
 message, public post or competition submission was performed.
+
+## November 1 verification on macOS
+
+Node 24.18.0 passed the TypeScript check and all 56 tests. The desktop and mobile smoke test passed in Google Chrome, including replay, same-hash resend, receipt export and return to a flat simulated position. The workbench now supplies its own favicon, which removes the missing-icon request Chrome exposed in the first run.
+
+The [close-helper reproduction](../feedback/evidence/001-close-mac.json) passed seven scenarios. The [bridge reproduction](../feedback/evidence/002-bridge-mac.json) confirmed the USDso quote failure at Shannon block 529372807 with four successful controls. The read-only Hideki2 doctor at block 38583441 reported zero gas, zero position and zero margin for the documented test account.
