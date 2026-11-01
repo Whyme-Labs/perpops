@@ -7,8 +7,7 @@ feedback materials are complete. The feedback reports can be reviewed and
 submitted without a funded trading account. The MVP still needs genuine testnet
 order evidence before it meets the event's stated execution requirement.
 
-No bounty entry or public social post has been submitted by this project. An
-accepted report, award or first-report status is not claimed.
+DoraHacks published [PerpOps Build #50740](https://dorahacks.io/build/50740), and the event confirmed hacker registration on November 1. Event submission for review is a separate step. The target is the Feedback track. The organizer determines report acceptance, severity and duplicates.
 
 Public repository: https://github.com/Whyme-Labs/perpops
 
