@@ -7,7 +7,7 @@ feedback materials are complete. The feedback reports can be reviewed and
 submitted without a funded trading account. The MVP still needs genuine testnet
 order evidence before it meets the event's stated execution requirement.
 
-DoraHacks published [PerpOps Build #50740](https://dorahacks.io/build/50740), and the event confirmed hacker registration on November 1. Event submission for review is a separate step. The target is the Feedback track. The organizer determines report acceptance, severity and duplicates.
+DoraHacks published [PerpOps Build #50740](https://dorahacks.io/build/50740) and confirmed hacker registration. On November 1 at 13:56 Malaysia time, the event rejected the Feedback submission with the message “You are not in the whitelist for this hackathon”. The entry has no review receipt. The organizer must whitelist the registered DoraHacks email before the build can be resubmitted.
 
 Public repository: https://github.com/Whyme-Labs/perpops
 
@@ -123,8 +123,7 @@ loss protection or unconditional exactly-once exchange effects.
 ## Submission actions outside the build
 
 - Repository access for judges is complete. The two Feedback reports and reproduction code are public.
-- Confirm the email used on DoraHacks is whitelisted through the organizer's
-  official process.
+- Obtain whitelist confirmation for the registered email through the organizer’s official process.
 - Submit the feedback report files and their evidence through the bounty's
   Feedback track. Acceptance, duplicates and severity are the organizer's decision.
 - For an MVP entry, complete the funded testnet execution in [funding.md](funding.md),
